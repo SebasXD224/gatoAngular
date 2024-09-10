@@ -1,0 +1,26 @@
+<main>
+    <h1>!GATO¡</h1>
+    <section class="juego-principal">
+        <div class="linea">
+            <div class="cuadro" (click)="colocarSimbolo(0)"><p *ngIf="gato[0][0] == 'X' || gato[0][0] == 'O'">{{gato[0][0]}}</p></div>
+            <div class="cuadro" (click)="colocarSimbolo(1)"><p *ngIf="gato[0][1] == 'X' || gato[0][1] == 'O'">{{gato[0][1]}}</p></div>
+            <div class="cuadro" (click)="colocarSimbolo(2)"><p *ngIf="gato[0][2] == 'X' || gato[0][2] == 'O'">{{gato[0][2]}}</p></div>
+        </div>
+        <div class="linea">
+            <div class="cuadro" (click)="colocarSimbolo(3)"><p *ngIf="gato[1][0] == 'X' || gato[1][0] == 'O'">{{gato[1][0]}}</p></div>
+            <div class="cuadro" (click)="colocarSimbolo(4)"><p *ngIf="gato[1][1] == 'X' || gato[1][1] == 'O'">{{gato[1][1]}}</p></div>
+            <div class="cuadro" (click)="colocarSimbolo(5)"><p *ngIf="gato[1][2] == 'X' || gato[1][2] == 'O'">{{gato[1][2]}}</p></div>
+        </div>
+        <div class="linea">
+            <div class="cuadro" (click)="colocarSimbolo(6)"><p *ngIf="gato[2][0] == 'X' || gato[2][0] == 'O'">{{gato[2][0]}}</p></div>
+            <div class="cuadro" (click)="colocarSimbolo(7)"><p *ngIf="gato[2][1] == 'X' || gato[2][1] == 'O'">{{gato[2][1]}}</p></div>
+            <div class="cuadro" (click)="colocarSimbolo(8)"><p *ngIf="gato[2][2] == 'X' || gato[2][2] == 'O'">{{gato[2][2]}}</p></div>
+        </div>
+    </section>
+    <div class="pantalla-ganador" *ngIf='mostrarGanador'>
+        El ganador es: {{ganador}}
+        <button class="volver-a-jugar" (click)="reiniciarJuego()">
+            ¿Volver a Jugar?
+        </button>
+    </div>
+</main>
